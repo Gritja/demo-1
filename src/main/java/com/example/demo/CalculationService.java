@@ -12,27 +12,27 @@ public class CalculationService {
 
 	//using get method and hello-world as URI  
 		@RequestMapping(method = RequestMethod.GET, path = "/add")
-		public String addNo(String int01, String int02) throws IOException {
-			float addSum = Integer.parseInt(int01) + Integer.parseInt(int02);
-			return "The sum of " + int01 + " + " + int02 + " = " + addSum;
+		public double addNo(double int01, double int02) throws IOException {
+			double addSum = int01 + int02;
+			return addSum;
 		} 
 
 		@RequestMapping(value = "/sub", method = RequestMethod.GET)
-		public String subNo(String int01, String int02) throws IOException {
-			float subDiff = Integer.parseInt(int01) - Integer.parseInt(int02);
-			return "The difference of " + int01 + " - " + int02 + " = " + subDiff;
+		public double subNo(double int01, double int02) throws IOException {
+			double subDiff = int01 - int02;
+			return subDiff;
 		}
 		
 		@RequestMapping(value = "/mlt", method = RequestMethod.GET)
-		public String mltNo(String int01, String int02) throws IOException {
-			float mltProd = Integer.parseInt(int01) * Integer.parseInt(int02);
-			return "The product of " + int01 + " * " + int02 + " = " + mltProd;
+		public double mltNo(double int01, double int02) throws IOException {
+			double mltProd = int01 * int02;
+			return mltProd;
 		}
 		
 		@RequestMapping(value = "/div", method = RequestMethod.GET)
-		public String divNo(String	 int01, String int02) throws IOException {
-			float divQuo = Integer.parseInt(int01) / Integer.parseInt(int02);			
-			return "The quotient of " + int01 + " / " + int02 + " = " + divQuo;
+		public double divNo(double int01, double int02) throws IOException {
+			double divQuo = int01 / int02;			
+			return divQuo;
 		}
 		
 
